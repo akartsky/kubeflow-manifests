@@ -51,7 +51,7 @@ class Metadata:
         filepath = os.path.abspath(os.path.join(METADATA_FOLDER, filename))
 
         with safe_open(filepath, "w") as file:
-            json.dump(self.params, file)
+            json.dump(self.params, file, indent=4)
 
         return filepath
 
@@ -75,7 +75,7 @@ def metadata(request):
 
 
 def configure_resource_fixture(
-    metadata, request, resource_id, metadata_key, on_create, on_delete
+    metadata, request, resource_details, metadata_key, on_create, on_delete
 ):
     """
     Helper method to create resources if required and configure them for teardown.
@@ -99,7 +99,25 @@ def configure_resource_fixture(
 
     if not metadata.get(metadata_key):
         on_create()
-        metadata.save(metadata_key, resource_id)
+        metadata.save(metadata_key, resource_details)
 
     successful_creation = True
     return metadata.get(metadata_key)
+
+def configure_env_file(env_file_path, env_dict):
+    """
+    Overwrite the contents of a .env file with the input env vars to configure with.
+
+    E.g. 
+        Inputs:
+        env_file_path='/path/to/file/params.env'
+        env_dict={'DB_HOST': 'https://rds.amazon.com/abcde'}
+
+        Contents of `env_file_path` will become:
+
+            DB_HOST=https://rds.amazon.com/abcde
+
+    """
+    with open(env_file_path, 'w') as file:
+        for key, value in env_dict.items():
+            file.write(f'{key}={value}\n')
