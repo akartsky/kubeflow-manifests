@@ -104,11 +104,12 @@ def configure_resource_fixture(
     successful_creation = True
     return metadata.get(metadata_key)
 
+
 def configure_env_file(env_file_path, env_dict):
     """
     Overwrite the contents of a .env file with the input env vars to configure with.
 
-    E.g. 
+    E.g.
         Inputs:
         env_file_path='/path/to/file/params.env'
         env_dict={'DB_HOST': 'https://rds.amazon.com/abcde'}
@@ -118,6 +119,6 @@ def configure_env_file(env_file_path, env_dict):
             DB_HOST=https://rds.amazon.com/abcde
 
     """
-    with open(env_file_path, 'w') as file:
+    with open(env_file_path, "w") as file:
         for key, value in env_dict.items():
-            file.write(f'{key}={value}\n')
+            file.write(f"{key}={value}\n")
