@@ -3,6 +3,7 @@ Generic helper methods module
 """
 
 import os
+import subprocess
 import time
 import random
 import string
@@ -88,3 +89,8 @@ def rand_name(prefix):
         random.choice(string.ascii_lowercase + string.digits) for _ in range(10)
     )
     return prefix + suffix
+
+
+def kubectl_apply(path):
+    cmd = f"kubectl apply -f {path}".split()
+    subprocess.call(cmd)
