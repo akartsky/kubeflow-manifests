@@ -385,7 +385,7 @@
 </span></span></code></pre></div><p>To verify the installation, you can run the <code>list-metrics</code> command and check that metrics have been created. It may take up to 15 minutes for the metrics to populate.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws cloudwatch list-metrics --namespace ContainerInsights --region <span class="nv">$CLUSTER_REGION</span>
 </span></span></code></pre></div><p>An example of the logs that will be available after installation are the logs of the Pods on your cluster. This way, the Pod logs can still be accessed past their default storage time. This also allows for an easy way to view logs for all Pods on your cluster without having to directly connect to your EKS cluster.</p>
-<p>The logs can be accessed by through CloudWatch log groups <img src="cloudwatch/cloudwatch-logs.png" alt="cloudwatch"></p>
+<p>The logs can be accessed by through CloudWatch log groups <img src="../../../images/cloudwatch/cloudwatch-logs.png" alt="cloudwatch"></p>
 <p>To view individual Pod logs, select <code>/aws/containerinsights/YOUR_CLUSTER_NAME/application</code>. <img src="images/cloudwatch/cloudwatch-application-logs.png" alt="application"></p>
 <p>The following image is an example of the <code>jupyter-web-app</code> Pod logs available through CloudWatch. <img src="docs/images/cloudwatch/cloudwatch-pod-logs.png" alt="jupyter-logs"></p>
 <p>For a full list of metrics that are provided by default, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-metrics-EKS.html">Amazon EKS and Kubernetes Container Insights metrics</a>.</p>
@@ -404,7 +404,7 @@
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 27, 2022: <a href="https://github.com/awslabs/kubeflow-manifests//commit/1473bc2575e0a419417c4ec5f4297a811abd52c9">[Website] Minor doc fixes (1473bc2)</a>
+  Last modified June 27, 2022: <a href="https://github.com/awslabs/kubeflow-manifests//commit/103567f8a329f7315023dec8c951f9e38059d5b7">[Website] Minor doc fixes (103567f)</a>
 </div>
 
 </div>
