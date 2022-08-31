@@ -28,7 +28,7 @@
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
       "url" : "https:\/\/akartsky.github.io\/kubeflow-manifests\/ack_bundle\/docs\/deployment\/add-ons\/cloudwatch\/guide\/",
-      "wordCount" : "343",
+      "wordCount" : "342",
       "keywords" : [ "Kubeflow" ]
   }
   </script>
@@ -49,12 +49,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://akartsky.github.io/kubeflow-manifests/ack_bundle/docs/deployment/add-ons/cloudwatch/guide/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-08-24T09:17:43-07:00" /><meta property="og:site_name" content="Kubeflow on AWS" />
+<meta property="article:modified_time" content="2022-08-31T12:29:22-07:00" /><meta property="og:site_name" content="Kubeflow on AWS" />
 
 <meta itemprop="name" content="CloudWatch">
 <meta itemprop="description" content="Set up CloudWatch ContainerInsights on Amazon EKS">
-<meta itemprop="dateModified" content="2022-08-24T09:17:43-07:00" />
-<meta itemprop="wordCount" content="343">
+<meta itemprop="dateModified" content="2022-08-31T12:29:22-07:00" />
+<meta itemprop="wordCount" content="342">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="CloudWatch"/>
 <meta name="twitter:description" content="Set up CloudWatch ContainerInsights on Amazon EKS"/>
@@ -379,7 +379,7 @@
 </span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CLUSTER_REGION</span><span class="o">=</span>&lt;&gt;
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">eksctl utils associate-iam-oidc-provider --region<span class="o">=</span><span class="nv">$CLUSTER_REGION</span> --cluster<span class="o">=</span><span class="nv">$CLUSTER_NAME</span> --approve
-</span></span><span class="line"><span class="cl">eksctl create iamserviceaccount --name cloudwatch-agent --namespace amazon-cloudwatch --cluster <span class="nv">$CLUSTER_NAME</span> --region <span class="nv">$CLUSTER_REGION</span> cloudwatch-agent --approve --override-existing-serviceaccounts --attach-policy-arn arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy
+</span></span><span class="line"><span class="cl">eksctl create iamserviceaccount --name cloudwatch-agent --namespace amazon-cloudwatch --cluster <span class="nv">$CLUSTER_NAME</span> --region <span class="nv">$CLUSTER_REGION</span> --approve --override-existing-serviceaccounts --attach-policy-arn arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy
 </span></span><span class="line"><span class="cl">eksctl create iamserviceaccount --name fluent-bit --namespace amazon-cloudwatch --cluster <span class="nv">$CLUSTER_NAME</span> --region <span class="nv">$CLUSTER_REGION</span> --approve --override-existing-serviceaccounts --attach-policy-arn arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy
 </span></span></code></pre></div><h2 id="install">Install</h2>
 <p>To install an optimized QuickStart configuration, enter the following command:</p>
@@ -410,7 +410,7 @@
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  Last modified August 24, 2022: <a href="https://github.com/awslabs/kubeflow-manifests//commit/d82efec1dcf44220df6e29342c41c44cd57cc729">add labels to ack cluster role (d82efec)</a>
+  Last modified August 31, 2022: <a href="https://github.com/awslabs/kubeflow-manifests//commit/08e381041f0c5edbf63b25db3c2303faf75546a3">improvements (08e3810)</a>
 </div>
 
 </div>
