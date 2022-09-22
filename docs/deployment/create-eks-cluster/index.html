@@ -28,7 +28,7 @@
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
       "url" : "https:\/\/akartsky.github.io\/kubeflow-manifests\/docs\/deployment\/create-eks-cluster\/",
-      "wordCount" : "175",
+      "wordCount" : "196",
       "keywords" : [ "Kubeflow" ]
   }
   </script>
@@ -49,12 +49,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://akartsky.github.io/kubeflow-manifests/docs/deployment/create-eks-cluster/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-09-19T18:41:53-07:00" /><meta property="og:site_name" content="Kubeflow on AWS" />
+<meta property="article:modified_time" content="2022-09-21T20:58:22-07:00" /><meta property="og:site_name" content="Kubeflow on AWS" />
 
 <meta itemprop="name" content="Create an EKS Cluster">
 <meta itemprop="description" content="Create an EKS cluster before you deploy Kubeflow on AWS using Kustomize or Helm">
-<meta itemprop="dateModified" content="2022-09-19T18:41:53-07:00" />
-<meta itemprop="wordCount" content="175">
+<meta itemprop="dateModified" content="2022-09-21T20:58:22-07:00" />
+<meta itemprop="wordCount" content="196">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Create an EKS Cluster"/>
 <meta name="twitter:description" content="Create an EKS cluster before you deploy Kubeflow on AWS using Kustomize or Helm"/>
@@ -468,12 +468,13 @@
 </span></span></code></pre></div><p>If you are using an existing EKS cluster, create an <a href="https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html">OIDC provider</a> and associate it with for your EKS cluster with the following command:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">eksctl utils associate-iam-oidc-provider --cluster <span class="si">${</span><span class="nv">CLUSTER_NAME</span><span class="si">}</span> <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>--region <span class="si">${</span><span class="nv">CLUSTER_REGION</span><span class="si">}</span> --approve
-</span></span></code></pre></div><p>More details about cluster creation via <code>eksctl</code> can be found in the <a href="https://eksctl.io/usage/creating-and-managing-clusters/">Creating and managing clusters</a> guide.</p>
+</span></span></code></pre></div><h4 id="important-if-you-are-using-an-eks-version--123-install-the-amazon-ebs-csi-driver-by-following-the-instructions-herehttpsdocsawsamazoncomekslatestuserguideebs-csihtml"><strong>Important:</strong> If you are using an EKS version <code>&gt;= 1.23</code> install the Amazon EBS CSI driver by following the instructions <a href="https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html">here</a>.</h4>
+<p>More details about cluster creation via <code>eksctl</code> can be found in the <a href="https://eksctl.io/usage/creating-and-managing-clusters/">Creating and managing clusters</a> guide.</p>
 
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  Last modified September 19, 2022: <a href="https://github.com/awslabs/kubeflow-manifests//commit/5fdb7b1c3e53b8633d75b08253dc3aadba361c85">Kubeflow 1.6 docs (#365) (5fdb7b1c)</a>
+  Last modified September 21, 2022: <a href="https://github.com/awslabs/kubeflow-manifests//commit/a27a0099cec5d04e21172e9e5e4744822cb126d2">Minor doc changes (a27a0099)</a>
 </div>
 
 </div>
